@@ -3,26 +3,27 @@ var mongoose = require('mongoose');
 var express = require('express');
 var app = express();
 var Hospitals = require('./hospital.model');
+var crontab = require('node-crontab');
 
 mongoose.connect('mongodb://localhost/hospital');
 
-setInterval (function() {
+var jobId = crontab.scheduleJob("55 * * * *", function(){
+    addToDatabase();
+});
+
+function addToDatabase() {
     request('http://apis.is/hospital', function (error, response, body) {
       if (!error && response.statusCode == 200) {
-     var hos = new Hospital();
+     var hos = new Hospitals();
         hos.hospitalData = JSON.parse(body);
         hos.save(function(err) {
             if (err) {
                 console.log(err);
-                //process.exit(1);
             }
-            //process.exit(0);
         });
       }
     });
-}, 3600000);
-
-
+}
 
 app.get('/hospitals', function (req, res) {
   
@@ -33,7 +34,6 @@ app.get('/hospitals', function (req, res) {
     return res.json(response);
   })
 });
-
 
 app.get('/hospitals/:from/:to', function (req, res) {
   var from = req.params.from;
