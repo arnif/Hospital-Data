@@ -72,9 +72,14 @@ var HospitalView = React.createClass({
 	render: function() { //TODO display data
 		var that = this;
 		var objectItems = [] 
+		var objectItemsArray = {}
 		Object.getOwnPropertyNames(this.props.hospitalData).forEach(function(val, idx, array) {
 			//console.log(val + ' -> ' + that.props.hospitalData[val]);
   							objectItems.push(<li>{val + ' -> ' + that.props.hospitalData[val]}</li>)
+						});
+		Object.getOwnPropertyNames(this.props.hospitalData).forEach(function(val, idx, array) {
+			//console.log(val + ' -> ' + that.props.hospitalData[val]);
+  							objectItemsArray[val] = that.props.hospitalData[val];
 						});
 		// console.log(objectItems);
 		return (
@@ -82,6 +87,9 @@ var HospitalView = React.createClass({
 				<ul>
 					<li>{objectItems}</li>
 				</ul>
+				<div className="height-div div1">
+					Today there are {objectItemsArray.hospitalizedNumbers} hospitalized and {objectItemsArray.dischargedNumbers} discharged
+				</div>
 			</div>
 		)
 	}
