@@ -88,6 +88,8 @@ var HospitalView = React.createClass({
 					<li>{objectItems}</li>
 				</ul>
 				<div className="height-div div1">
+					<img src={"../img/hospital_lineart.svg"} className="hospital-img"/>
+					<img src={"../img/family.jpg"} className="family-img"/>
 					Today there are {objectItemsArray.hospitalizedNumbers} hospitalized and {objectItemsArray.dischargedNumbers} discharged
 				</div>
 			</div>

@@ -11,6 +11,19 @@
 }
 .div1 {
 	background-color: #FFFFFF;
+	text-align: center;
+	position: relative;
+	top:0;
+	left:0;
+}
+.hospital-img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.family-img {
+	position: absolute;
+	top:0;
 }
 .div2 {
 	background-color: red;
