@@ -5,7 +5,6 @@ import constants from '../../config/constants';
 class HospitalActions extends Actions {
 	
 	newData(data) {
-		console.log('newData', data);
 		return { data }
 	}
 
