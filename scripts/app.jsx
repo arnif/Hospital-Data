@@ -35,11 +35,18 @@ let App = React.createClass({
   render() {    
     return (
       <div>
-        <h1>Cool</h1>
-        <h2>Datepicker comes here</h2>
+        <div className="hospital-header"> 
+          <h1>Hospital Data</h1>
+        </div>
+
+        <div className="hospital-picker-wrapper">
+        <h2>Pick a date</h2>
         <DateTimePicker 
-        value={this.state.date} 
-        onChange={this.changeDate.bind()}/>      
+            className="hospital-picker-picker" 
+            value={this.state.date} 
+            onChange={this.changeDate.bind()}/>  
+        </div>
+
         <div> {this.props.atWork} At work</div>
         <div> {this.props.birthNumbers} birthNumbers </div>
         <div> {this.props.dischargedNumbers} dischargedNumbers </div>
