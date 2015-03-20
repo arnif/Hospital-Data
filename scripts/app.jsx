@@ -25,7 +25,13 @@ let App = React.createClass({
     return (
       <div>
         <h1>Cool</h1>
+        <h2>Datepicker comes here</h2>
         <button onClick={this.getHospital}>TAKKI</button>        
+        <div> Div 1 </div>
+        <div> Div 2 </div>
+        <div> Div 3 </div>
+        <div> Div 4 </div>
+        <div> Div 5 </div>
       </div>
     );
   }
