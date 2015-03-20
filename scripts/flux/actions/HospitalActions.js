@@ -12,6 +12,9 @@ class HospitalActions extends Actions {
 		console.log('getData', from, to);
 	    request.get(`${constants.api}/${from}/${to}`)
 	      .end(res => {
+	      	console.log('API CALL from', from);
+	      	console.log('API CALL to', to);
+	      	console.log('API CALL results', res.body);
 	        this.newData(res.body);
 	      });
   }  

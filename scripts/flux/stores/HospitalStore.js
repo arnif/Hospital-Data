@@ -25,6 +25,7 @@ class HospitalStore extends Store {
   }
   setData(hospital) {
     let hospitalData = hospital[0].hospitalData.results[0];
+    console.log('this is the new data!!!', hospitalData);
   	this.setState({ 
       atWork: hospitalData.atwork,
       birthNumbers: hospitalData.birthNumbers,

@@ -5,6 +5,7 @@ import FluxContainer from 'flummox';
 import constants from './config/constants';
 var ReactWidgets = require('react-widgets');
 var DateTimePicker = ReactWidgets.DateTimePicker;
+var moment = require('moment');
 
 require('./app.scss');
 
@@ -13,24 +14,32 @@ let CSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 
 let App = React.createClass({
-
+  getInitialState() {
+    var date = new Date();
+    date.setHours(date.getHours());
+    date.setMinutes(0);
+    return { date: date};
+  },
   componentDidMount() {
     
   },
-  getHospital() {
-  	//TODO
-  	console.log('getHospital in appJSX');
-  	this.props.flux.getActions('HospitalActions').getData('2015-02-09T19:55:00.269Z', '2015-02-11T21:55:00.933Z');
-
+  changeDate(value) {
+    //Sat Mar 07 2015 14:56:00 GMT+0000 (GMT)
+    var state = {};
+    state['date'] = value;
+    this.setState(state);
+    var date = moment(value).format();
+    var dateFrom = moment(value).subtract(15, 'minutes').format();
+    this.props.flux.getActions('HospitalActions').getData(dateFrom, date);
   },
-
-  render() {
+  render() {    
     return (
       <div>
         <h1>Cool</h1>
         <h2>Datepicker comes here</h2>
-        <DateTimePicker defaultValue={null} />
-        <button onClick={this.getHospital}>TAKKI</button>        
+        <DateTimePicker 
+        value={this.state.date} 
+        onChange={this.changeDate.bind()}/>      
         <div> {this.props.atWork} At work</div>
         <div> {this.props.birthNumbers} birthNumbers </div>
         <div> {this.props.dischargedNumbers} dischargedNumbers </div>
