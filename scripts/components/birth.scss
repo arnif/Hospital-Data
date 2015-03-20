@@ -1,0 +1,16 @@
+.birth {
+	position: relative;
+	top: 0;
+	left: 0;
+	.preggo {
+		position: absolute;
+		left: 48%;
+		height: 100%;
+	};
+	.fetus {
+		position: absolute;
+		left: 50%;
+		top: 48%;
+		height: 15%;
+	}
+};

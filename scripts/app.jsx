@@ -6,8 +6,14 @@ import constants from './config/constants';
 var ReactWidgets = require('react-widgets');
 var DateTimePicker = ReactWidgets.DateTimePicker;
 var moment = require('moment');
+var AtWork = require('./components/atWork');
+var Blood = require('./components/blood');
+var Surgery = require('./components/surgeries');
+var Birth = require('./components/birth');
+var Hos = require('./components/hos');
 
 require('./app.scss');
+require('./divStyles.scss');
 
 let Props = React.PropTypes;
 let CSSTransitionGroup = React.addons.CSSTransitionGroup;
@@ -32,7 +38,16 @@ let App = React.createClass({
     var dateFrom = moment(value).subtract(15, 'minutes').format();
     this.props.flux.getActions('HospitalActions').getData(dateFrom, date);
   },
-  render() {    
+  render() {
+  var hospitalizedNumbers = {
+    er: this.props.patientsEr,
+    child: this.props.patientsChild,
+    heart: this.props.patientsHeart2,
+    icu: this.props.patientsIcu,
+    hotel: this.props.patientsHotel,
+    walk: this.props.patientsWalk
+
+  }    
     return (
       <div>
         <div className="hospital-header"> 
@@ -46,20 +61,11 @@ let App = React.createClass({
             value={this.state.date} 
             onChange={this.changeDate.bind()}/>  
         </div>
-
-        <div> {this.props.atWork} At work</div>
-        <div> {this.props.birthNumbers} birthNumbers </div>
-        <div> {this.props.dischargedNumbers} dischargedNumbers </div>
-        <div> {this.props.donors} Blood donors </div>
-        <div> {this.props.hospitalizedNumbers} hospitalizedNumbers </div>
-        <div> {this.props.patientsChild} at child thing </div>
-        <div> {this.props.patientsEr} at ER </div>
-        <div> {this.props.patientsHeart2} patientsHeart2 </div>
-        <div> {this.props.patientsHotel} patientsHotel </div>
-        <div> {this.props.patientsIcu} ICU </div>
-        <div> {this.props.patientsSkilun} patientsSkilun </div>
-        <div> {this.props.patientsWalk} patientsWalk </div>
-        <div> {this.props.surgeries} surgeries </div>
+        <AtWork className="height atWork" number={this.props.atWork} />
+        <Blood className="height blood" number={this.props.donors} />
+        <Surgery className="height surgery" number={this.props.surgeries} />
+        <Birth className="height birth" number={this.props.birthNumbers} />
+        <Hos className="height hos" number={hospitalizedNumbers} />
       </div>
     );
   }

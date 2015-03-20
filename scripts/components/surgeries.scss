@@ -1,0 +1,17 @@
+.surgery {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	.needle {
+		position: absolute;
+		top: 5px;
+		left: 49%;
+		height: 40%;
+	};
+	.stretcher {
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		height: 40%;
+	};
+};
