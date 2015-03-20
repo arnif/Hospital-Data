@@ -3,6 +3,8 @@
 import React from 'react/addons';
 import FluxContainer from 'flummox';
 import constants from './config/constants';
+var ReactWidgets = require('react-widgets');
+var DateTimePicker = ReactWidgets.DateTimePicker;
 
 require('./app.scss');
 
@@ -27,6 +29,7 @@ let App = React.createClass({
       <div>
         <h1>Cool</h1>
         <h2>Datepicker comes here</h2>
+        <DateTimePicker defaultValue={null} />
         <button onClick={this.getHospital}>TAKKI</button>        
         <div> {this.props.atWork} At work</div>
         <div> {this.props.birthNumbers} birthNumbers </div>
