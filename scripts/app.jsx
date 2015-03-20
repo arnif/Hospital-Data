@@ -15,12 +15,17 @@ let App = React.createClass({
   componentDidMount() {
     
   },
+  getHospital() {
+  	//TODO
+  	console.log('getHospital in appJSX');
+  	this.props.flux.getActions('HospitalActions').getData('2015-02-09T19:55:00.269Z', '2015-02-11T21:55:00.933Z')
 
+  },
   render() {
     return (
       <div>
         <h1>Cool</h1>
-        <button onClick="this.props.flux.getActions('HospitalActions').getData('2015-02-09T19:55:00.269Z', '2015-02-11T21:55:00.933Z')">TAKKI</button>
+        <button onClick={this.getHospital}>TAKKI</button>        
       </div>
     );
   }

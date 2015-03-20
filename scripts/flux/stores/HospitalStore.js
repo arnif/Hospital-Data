@@ -8,12 +8,14 @@ class HospitalStore extends Store {
     this.register(scheduleActionIds.newData, this.getData);
     
     this.state = {
-    	data = {}
-    };
+    	data: {}
+    }
   }
-
+  setData(hospital) {
+  	this.setState({ data: hospital});
+  }
   getData(results) {
-  	console.log('results', results);
+  	this.setData(results.data);
   }
 }
 
