@@ -5,10 +5,15 @@ class HospitalStore extends Store {
     super();
 
     let scheduleActionIds = flux.getActionIds('HospitalActions');
+    this.register(scheduleActionIds.newData, this.getData);
     
     this.state = {
-      schedule: [],
+    	data = {}
     };
+  }
+
+  getData(results) {
+  	console.log('results', results);
   }
 }
 
