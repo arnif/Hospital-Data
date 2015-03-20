@@ -1,3 +1,3 @@
 export default {
-  "api": "http://localhost:1337/api"
+  "api": "http://iagh.batman.wtf:3000/hospitals"
 };
