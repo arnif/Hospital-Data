@@ -5,7 +5,7 @@ var app = express();
 var Hospitals = require('./hospital.model');
 var crontab = require('node-crontab');
 var cors = require('cors');
-app.use(cors);
+app.use(cors());
 
 mongoose.connect('mongodb://localhost/hospital');
 
