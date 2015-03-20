@@ -6,6 +6,22 @@
   box-sizing: border-box;
 }
 
+.hospital-header {
+  height: 135px;
+  padding-top: 25px;
+  background-color: #8a2326;
+  color: white;
+  text-align: center;
+}
+
+.hospital-picker-wrapper {
+  padding-top: 0px;
+}
+
+.hospital-picker-picker {
+  width: 400px;
+}
+
 body {
   min-height: 100vh;
   padding: 0;

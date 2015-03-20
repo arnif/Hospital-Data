@@ -27,10 +27,16 @@ let App = React.createClass({
   render() {
     return (
       <div>
-        <h1>Cool</h1>
-        <h2>Datepicker comes here</h2>
-        <DateTimePicker defaultValue={null} />
-        <button onClick={this.getHospital}>TAKKI</button>        
+        <div className="hospital-header"> 
+          <h1>Hospital Data</h1>
+        </div>
+
+        <div className="hospital-picker-wrapper">
+          <h2>Pick a date</h2>
+          <DateTimePicker className="hospital-picker-picker" defaultValue={null} />
+          <button onClick={this.getHospital}>TAKKI</button>
+        </div>
+
         <div> {this.props.atWork} At work</div>
         <div> {this.props.birthNumbers} birthNumbers </div>
         <div> {this.props.dischargedNumbers} dischargedNumbers </div>
