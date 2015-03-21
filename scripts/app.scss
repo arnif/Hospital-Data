@@ -12,18 +12,21 @@
   background-color: #8a2326;
   color: white;
   text-align: center;
+  height: 100vh;
 }
 
 .hospital-picker-wrapper {
   padding-top: 0px;
-}
 
-.hospital-picker-picker {
-  width: 400px;
+  .hospital-picker-picker {
+    width: 400px;
+  }
+
 }
 
 body {
   min-height: 100vh;
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
   font-family: $font-family;
@@ -63,10 +66,10 @@ body {
 
     .wrapper:first-child{
       &:before{
-        content: "\f041"; 
+        content: "\f041";
       }
       input{
-        width: 340px;  
+        width: 340px;
       }
     }
 

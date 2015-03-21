@@ -37,3 +37,4 @@ server/logs/*
 #other stuff
 9_3/
 bak.tar
+.ide/

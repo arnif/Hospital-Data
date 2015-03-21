@@ -52,15 +52,19 @@ let App = React.createClass({
       <div>
         <div className="hospital-header"> 
           <h1>Hospital Data</h1>
+
+          <div className="hospital-picker-wrapper">
+            <h2>Pick a date</h2>
+            <DateTimePicker
+                className="hospital-picker-picker"
+                step={60}
+                value={this.state.date}
+                onChange={this.changeDate.bind()}
+
+            />
+          </div>
         </div>
 
-        <div className="hospital-picker-wrapper">
-        <h2>Pick a date</h2>
-        <DateTimePicker 
-            className="hospital-picker-picker" 
-            value={this.state.date} 
-            onChange={this.changeDate.bind()}/>  
-        </div>
         <AtWork className="height atWork" number={this.props.atWork} />
         <Blood className="height blood" number={this.props.donors} />
         <Surgery className="height surgery" number={this.props.surgeries} />
