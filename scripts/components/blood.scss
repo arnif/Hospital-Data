@@ -3,6 +3,20 @@
 		display: block;	
 		margin-left: auto;
 		margin-right: auto;
-		height: 100%;
+		height: 475px;
 	};
+  
+  .blood_wrapper {
+	position: relative;
+
+	.blood_mynd {
+	  position: absolute;
+	}
+
+	.blood_overlay {
+	  z-index: 100;
+	  clip: rect(390px, 558px, 482px, 0px);
+	}	
+  }
+  
 };
