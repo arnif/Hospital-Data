@@ -1,10 +1,17 @@
 .atWork {
+  padding-top: 20px;
 	.nurse {
 		height: 475px;
-	};
+	}
+    .female{
+	  position: absolute;
+	  right:0;
+    }
 
-  .female{
-	position: absolute;
-	right:0;
+    .text-bellow{
+      width: 100%;
+      text-align: center;
+      font-size: 66px;
+      padding-top: 100px;
   }
 };

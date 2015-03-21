@@ -51,10 +51,9 @@ let App = React.createClass({
     return (
       <div>
         <div className="hospital-header"> 
-          <h1>Hospital Data</h1>
-
+          <div className="title-text">Hospital Data</div>
+          <div className="pick-text">Pick a date</div>
           <div className="hospital-picker-wrapper">
-            <h2>Pick a date</h2>
             <DateTimePicker
                 className="hospital-picker-picker"
                 step={60}

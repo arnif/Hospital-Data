@@ -8,15 +8,27 @@
 
 .hospital-header {
   height: 135px;
-  padding-top: 25px;
+  padding-top: 100px;
   background-color: #8a2326;
   color: white;
   text-align: center;
   height: 100vh;
+
+  .title-text {
+    font-size: 100px;
+    padding-bottom: 150px;
+  }
+
+  .pick-text {
+    font-size: 55px;
+    padding-bottom: 50px;
+  }
 }
 
 .hospital-picker-wrapper {
   padding-top: 0px;
+  width: 400px;
+  margin-left: 38%;
 
   .hospital-picker-picker {
     width: 400px;
