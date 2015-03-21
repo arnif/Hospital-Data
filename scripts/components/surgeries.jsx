@@ -13,7 +13,8 @@ let surgery = React.createClass({
 			<div className={this.props.className}>
 				There were {this.props.number} at surgery
 				<img className="needle" src="../../img/needle.svg"></img>
-				<img className="stretcher" src="../../img/stretcher.svg"></img>
+				<img className="stretcher" src="../../img/stretcher.svg"
+				data-_surgeriepatientstart="transform: translateX(0px);" data-_surgeriepatientend="transform: translateX(-700px);"></img>
 			</div>
 		);
 	}

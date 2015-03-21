@@ -10,7 +10,9 @@ require(['skrollr'], function(skrollr){
 			zero: 500,
 			five00 : 800,
 			donorsstart: 1500,
-			donorsend: 1800
+			donorsend: 1800,
+			surgeriepatientstart: 2500,
+			surgeriepatientend: 2800
 		}
 	});
 });
