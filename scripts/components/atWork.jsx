@@ -12,7 +12,13 @@ require(['skrollr'], function(skrollr){
 			donorsstart: 1500,
 			donorsend: 1800,
 			surgeriepatientstart: 2500,
-			surgeriepatientend: 2800
+			surgeriepatientend: 2800,
+			kniferotatestart: 2400,
+			kniferotateend: 2530,
+			knifecutstart: 2750,
+			knifecutend: 300,
+			makethecutstart: 2740,
+			makethecutend: 2800
 		}
 	});
 });
