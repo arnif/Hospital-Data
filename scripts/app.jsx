@@ -25,11 +25,9 @@ let App = React.createClass({
     return { date: date};
   },
   componentDidMount() {
-    console.log('IM HEEERE');
     this.changeDate(new Date(moment().set('minutes', 0).format()));
   },
   changeDate(value) {
-    console.log(value);
     //Sat Mar 07 2015 14:56:00 GMT+0000 (GMT)
     var state = {};
     state['date'] = value;
