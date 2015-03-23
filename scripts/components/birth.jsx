@@ -11,7 +11,7 @@ let Birth = React.createClass({
 	render() {
 		return (
 			<div className={this.props.className}>
-				There are {this.props.number} at born
+				There are {this.props.selected} at born NOW there are {this.props.now} born
 				<img className="preggo"  src="../../img/preggo.svg"></img>
 				<img className="fetus" data-bottom="top: 58%; opacity: 1; left: 50%;" data-top="top: 88%; left: 60%; opacity: 0;" src="../../img/fetus.svg"></img>
 				<img className="newborn" data-bottom="opacity: 0;" data-center-top="opacity: 1;" src="../../img/baby.svg"></img>

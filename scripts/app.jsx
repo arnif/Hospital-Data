@@ -38,14 +38,22 @@ let App = React.createClass({
   },
   render() {
   var hospitalizedNumbers = {
-    er: this.props.patientsEr,
-    child: this.props.patientsChild,
-    heart: this.props.patientsHeart2,
-    icu: this.props.patientsIcu,
-    hotel: this.props.patientsHotel,
-    walk: this.props.patientsWalk
+    er: this.props.selected.patientsEr,
+    child: this.props.selected.patientsChild,
+    heart: this.props.selected.patientsHeart2,
+    icu: this.props.selected.patientsIcu,
+    hotel: this.props.selected.patientsHotel,
+    walk: this.props.selected.patientsWalk
 
   };
+   var nowHospitalizedNumbers = {
+     er: this.props.now.patientsEr,
+     child: this.props.now.patientsChild,
+     heart: this.props.now.patientsHeart2,
+     icu: this.props.now.patientsIcu,
+     hotel: this.props.now.patientsHotel,
+     walk: this.props.now.patientsWalk
+   }
     return (
       <div>
         <div className="hospital-header"> 
@@ -62,11 +70,11 @@ let App = React.createClass({
           </div>
         </div>
 
-        <AtWork className="height atWork" number={this.props.atWork} />
-        <Blood className="height blood" number={this.props.donors} />
-        <Surgery className="height surgery" number={this.props.surgeries} />
-        <Birth className="height birth" number={this.props.birthNumbers} />
-        <Hos className="height hos" number={hospitalizedNumbers} />
+        <AtWork className="height atWork" selected={this.props.selected.atWork} now={this.props.now.atWork}/>
+        <Blood className="height blood" selected={this.props.selected.donors} now={this.props.now.donors}/>
+        <Surgery className="height surgery" selected={this.props.selected.surgeries} now={this.props.now.surgeries}/>
+        <Birth className="height birth" selected={this.props.selected.birthNumbers} now={this.props.now.birthNumbers}/>
+        <Hos className="height hos" selected={hospitalizedNumbers} now={nowHospitalizedNumbers}/>
       </div>
     );
   }

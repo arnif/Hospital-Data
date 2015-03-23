@@ -58,7 +58,6 @@ app.get('/hospitals/:from/:to', function (req, res) {
           return res.send(err);
         }
       getCurrentData().then(function(data) {
-          console.log('current data', data);
           var returnData = {
               selectedData: response,
               currentData: data

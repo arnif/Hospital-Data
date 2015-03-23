@@ -36,7 +36,8 @@ let AtWork = React.createClass({
 				<img className="nurse male" data-bottom="transform: translateX(-60%);" data-top="transform: translateX(200%);" src="../../img/doctor.svg"></img>
 				<img className="nurse female" data-bottom="transform: translateX(60%);" data-top="transform: translateX(-200%	);" src="../../img/nurse.svg"></img>
                 <div className="text-bellow">
-                    There were {this.props.number} at work
+                    There were {this.props.selected} at work thats
+				 and now there are {this.props.now} working
                 </div>
 			</div>
 		);

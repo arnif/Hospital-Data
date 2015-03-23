@@ -8,38 +8,79 @@ class HospitalStore extends Store {
     this.register(scheduleActionIds.newData, this.getData);
     
     this.state = {
-      atWork: 0,
-      birthNumbers: 0,
-      dischargedNumbers: 0,
-      donors: 0,
-      hospitalizedNumbers: 0,
-      patientsChild: 0,
-      patientsEr: 0,
-      patientsHeart2: 0,
-      patientsHotel: 0,
-      patientsIcu: 0,
-      patientsSkilun: 0,
-      patientsWalk: 0,
-      surgeries: 0
+      now: {
+        atWork: 0,
+        birthNumbers: 0,
+        dischargedNumbers: 0,
+        donors: 0,
+        hospitalizedNumbers: 0,
+        patientsChild: 0,
+        patientsEr: 0,
+        patientsHeart2: 0,
+        patientsHotel: 0,
+        patientsIcu: 0,
+        patientsSkilun: 0,
+        patientsWalk: 0,
+        surgeries: 0
+      },
+      selected: {
+        atWork: 0,
+        birthNumbers: 0,
+        dischargedNumbers: 0,
+        donors: 0,
+        hospitalizedNumbers: 0,
+        patientsChild: 0,
+        patientsEr: 0,
+        patientsHeart2: 0,
+        patientsHotel: 0,
+        patientsIcu: 0,
+        patientsSkilun: 0,
+        patientsWalk: 0,
+        surgeries: 0
+      }
+
     }
   }
   setData(hospital) {
-    let hospitalData = hospital[0].hospitalData.results[0];
-    console.log('this is the new data!!!', hospitalData);
-  	this.setState({ 
-      atWork: hospitalData.atwork,
-      birthNumbers: hospitalData.birthNumbers,
-      dischargedNumbers: hospitalData.dischargedNumbers,
-      donors: hospitalData.donors,
-      hospitalizedNumbers: hospitalData.hospitalizedNumbers,
-      patientsChild: hospitalData['patients-child'],
-      patientsEr: hospitalData['patients-er'],
-      patientsHeart2: hospitalData['patients-heart2'],
-      patientsHotel: hospitalData['patients-hotel'],
-      patientsIcu: hospitalData['patients-icu'],
-      patientsSkilun: hospitalData['patients-skilun'],
-      patientsWalk: hospitalData['patients-walk'],
-      surgeries: hospitalData.surgeries
+    console.log('this is the new data!!!', hospital);
+    //let hospitalData = hospital[0].hospitalData.results[0];
+    let now = hospital.currentData.results[0];
+    let selected = hospital.selectedData[0].hospitalData.results[0];
+
+    console.log('selected', selected);
+
+  	this.setState({
+      now: {
+        atWork: now.atwork,
+        birthNumbers: now.birthNumbers,
+        dischargedNumbers: now.dischargedNumbers,
+        donors: now.donors,
+        hospitalizedNumbers: now.hospitalizedNumbers,
+        patientsChild: now['patients-child'],
+        patientsEr: now['patients-er'],
+        patientsHeart2: now['patients-heart2'],
+        patientsHotel: now['patients-hotel'],
+        patientsIcu: now['patients-icu'],
+        patientsSkilun: now['patients-skilun'],
+        patientsWalk: now['patients-walk'],
+        surgeries: now.surgeries
+      },
+      selected: {
+        atWork: selected.atwork,
+        birthNumbers: selected.birthNumbers,
+        dischargedNumbers: selected.dischargedNumbers,
+        donors: selected.donors,
+        hospitalizedNumbers: selected.hospitalizedNumbers,
+        patientsChild: selected['patients-child'],
+        patientsEr: selected['patients-er'],
+        patientsHeart2: selected['patients-heart2'],
+        patientsHotel: selected['patients-hotel'],
+        patientsIcu: selected['patients-icu'],
+        patientsSkilun: selected['patients-skilun'],
+        patientsWalk: selected['patients-walk'],
+        surgeries: selected.surgeries
+      }
+
     });
   }
 
