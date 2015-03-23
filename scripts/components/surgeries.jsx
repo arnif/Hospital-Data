@@ -11,7 +11,9 @@ let surgery = React.createClass({
 	render() {
 		return (
 			<div className={this.props.className}>
-				There were {this.props.number} at surgery
+                <div className="theText">
+                    There were {this.props.number} at surgery
+                </div>
 				<img className="needle" src="../../img/needle.svg"
 				data-_kniferotatestart="transform:rotate(0deg) translate(0px, 0px);"
 				data-_kniferotateend="transform:rotate(45deg) translate(150px,90px);"
