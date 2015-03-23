@@ -18,7 +18,10 @@ require(['skrollr'], function(skrollr){
 			knifecutstart: '275p',
 			knifecutend: '30p',
 			makethecutstart: '274p',
-			makethecutend: '280p'
+			makethecutend: '280p',
+			birthstart: '260p',
+			birthend: '280p',
+			retbirth: '285p'
 		}
 	});
 });
@@ -30,8 +33,8 @@ let AtWork = React.createClass({
 		return (
 
 			<div className={this.props.className}>
-				<img className="nurse male" data-_zero="transform: translateX(-60%);" data-_five00="transform: translateX(200%);" src="../../img/doctor.svg"></img>
-				<img className="nurse female" data-_zero="transform: translateX(60%);" data-_five00="transform: translateX(-200%	);" src="../../img/nurse.svg"></img>
+				<img className="nurse male" data-bottom="transform: translateX(-60%);" data-top="transform: translateX(200%);" src="../../img/doctor.svg"></img>
+				<img className="nurse female" data-bottom="transform: translateX(60%);" data-top="transform: translateX(-200%	);" src="../../img/nurse.svg"></img>
                 <div className="text-bellow">
                     There were {this.props.number} at work
                 </div>
