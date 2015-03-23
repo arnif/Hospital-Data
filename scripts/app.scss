@@ -9,7 +9,7 @@
 .hospital-header {
   height: 135px;
   padding-top: 100px;
-  background-color: #8a2326;
+    background-color: $color-vine;
   color: white;
   text-align: center;
   height: 100vh;
@@ -26,9 +26,8 @@
 }
 
 .hospital-picker-wrapper {
-  padding-top: 0px;
-  width: 400px;
-  margin-left: 38%;
+  width: 50%;
+  margin: 0 auto;
 
   .hospital-picker-picker {
     width: 400px;
