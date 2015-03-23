@@ -17,7 +17,7 @@ class HospitalActions extends Actions {
 	      	console.log('API CALL results', res.body);
 	        this.newData(res.body);
 	      });
-  }  
+  }
 }
 
 export default HospitalActions;

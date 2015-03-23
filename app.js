@@ -5,6 +5,7 @@ var app = express();
 var Hospitals = require('./hospital.model');
 var crontab = require('node-crontab');
 var cors = require('cors');
+var q = require('q');
 app.use(cors());
 
 mongoose.connect('mongodb://localhost/hospital');
@@ -27,6 +28,17 @@ function addToDatabase() {
     });
 }
 
+function getCurrentData() {
+    var deferred = q.defer();
+    request('http://apis.is/hospital', function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+            deferred.resolve(JSON.parse(body));
+        }
+        deferred.reject(error);
+    });
+    return deferred.promise;
+}
+
 app.get('/hospitals', function (req, res) {
   
   Hospitals.find({}, function(err, response) {
@@ -45,7 +57,15 @@ app.get('/hospitals/:from/:to', function (req, res) {
         if (err) {
           return res.send(err);
         }
-        return res.json(response);
+      getCurrentData().then(function(data) {
+          console.log('current data', data);
+          var returnData = {
+              selectedData: response,
+              currentData: data
+          };
+          return res.json(returnData);
+      });
+
       });
 
 

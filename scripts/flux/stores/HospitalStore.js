@@ -39,7 +39,7 @@ class HospitalStore extends Store {
       patientsIcu: hospitalData['patients-icu'],
       patientsSkilun: hospitalData['patients-skilun'],
       patientsWalk: hospitalData['patients-walk'],
-      surgeries: hospitalData.surgeries,
+      surgeries: hospitalData.surgeries
     });
   }
 

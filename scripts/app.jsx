@@ -45,7 +45,7 @@ let App = React.createClass({
     hotel: this.props.patientsHotel,
     walk: this.props.patientsWalk
 
-  }    
+  };
     return (
       <div>
         <div className="hospital-header"> 
