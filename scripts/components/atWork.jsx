@@ -7,22 +7,21 @@ require('./atWork.scss');
 require(['skrollr'], function(skrollr){
 	var s = skrollr.init({
 		constants: {
-			zero: 500,
-			five00 : 800,
-			donorsstart: 1500,
-			donorsend: 1800,
-			surgeriepatientstart: 2500,
-			surgeriepatientend: 2800,
-			kniferotatestart: 2400,
-			kniferotateend: 2530,
-			knifecutstart: 2750,
-			knifecutend: 300,
-			makethecutstart: 2740,
-			makethecutend: 2800,
+			zero: '50p',
+			five00 : '80p',
+			donorsstart: '150p',
+			donorsend: '180p',
+			surgeriepatientstart: '250p',
+			surgeriepatientend: '280p',
+			kniferotatestart: '240p',
+			kniferotateend: '253p',
+			knifecutstart: '275p',
+			knifecutend: '30p',
+			makethecutstart: '274p',
+			makethecutend: '280p',
 			birthstart: 2600,
 			birthend: 2800,
 			retbirth: 2850
-
 		}
 	});
 });
