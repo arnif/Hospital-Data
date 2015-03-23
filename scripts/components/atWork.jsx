@@ -18,7 +18,11 @@ require(['skrollr'], function(skrollr){
 			knifecutstart: 2750,
 			knifecutend: 300,
 			makethecutstart: 2740,
-			makethecutend: 2800
+			makethecutend: 2800,
+			birthstart: 2600,
+			birthend: 2800,
+			retbirth: 2850
+
 		}
 	});
 });

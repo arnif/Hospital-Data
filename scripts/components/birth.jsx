@@ -12,8 +12,8 @@ let Birth = React.createClass({
 		return (
 			<div className={this.props.className}>
 				There are {this.props.number} at born
-				<img className="preggo" src="../../img/preggo.svg"></img>
-				<img className="fetus" src="../../img/fetus.svg"></img>
+				<img className="preggo"  src="../../img/preggo.svg"></img>
+				<img className="fetus" data-_birthstart="top: 58%; background-color: red;" data-_birthend="top: 88%; background-color: blue;" src="../../img/fetus.svg"></img>
 			</div>
 		);
 	}
