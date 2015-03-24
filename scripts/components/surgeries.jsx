@@ -8,11 +8,12 @@ let surgery = React.createClass({
 	getInitialState() {
 		return null
 	},
+
 	render() {
 		return (
 			<div className={this.props.className}>
                 <div className="theText">
-                    There were {this.props.selected} at surgery NOW there are {this.props.now}
+                    There were {this.props.selected} person in surgery NOW there are {this.props.now}
                 </div>
 				<img className="needle" src="../../img/needle.svg"
 				data-_kniferotatestart="transform:rotate(0deg) translate(0px, 0px);"

@@ -33,11 +33,10 @@ let AtWork = React.createClass({
 		return (
 
 			<div className={this.props.className}>
-				<img className="nurse male" data-bottom="transform: translateX(-60%);" data-top="transform: translateX(200%);" src="../../img/doctor.svg"></img>
-				<img className="nurse female" data-bottom="transform: translateX(60%);" data-top="transform: translateX(-200%	);" src="../../img/nurse.svg"></img>
+				<img className="nurse male" data-bottom-top="transform: translateX(-60%);" data-center="transform: translateX(200%);" src="../../img/doctor.svg"></img>
+				<img className="nurse female" data-bottom-top="transform: translateX(60%);" data-center="transform: translateX(-200%	);" src="../../img/nurse.svg"></img>
                 <div className="text-bellow">
-                    There were {this.props.selected} at work thats
-				 and now there are {this.props.now} working
+                    There were {this.props.selected} working compared to {this.props.now} today
                 </div>
 			</div>
 		);

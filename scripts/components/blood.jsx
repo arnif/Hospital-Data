@@ -17,7 +17,7 @@ let Blood = React.createClass({
 					<img src="../../img/blod.svg" className="blood_mynd"></img>
 				</div>
                 <div className="text-bellow">
-                    There were {this.props.selected} blood donors now there are {this.props.now}
+                    There were {this.props.selected} blood donors compared to {this.props.now} today
                 </div>
 			</div>
 		);
