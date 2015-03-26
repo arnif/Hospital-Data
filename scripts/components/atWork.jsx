@@ -7,6 +7,7 @@ require('./atWork.scss');
 require(['skrollr'], function(skrollr){
 	var s = skrollr.init({
 		constants: {
+			onehundred: 100,
 			zero: '50p',
 			five00 : '80p',
 			donorsstart: '150p',

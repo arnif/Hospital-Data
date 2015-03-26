@@ -15,15 +15,11 @@ let surgery = React.createClass({
                 <div className="theText">
                     There were {this.props.selected} person in surgery NOW there are {this.props.now}
                 </div>
-				<img className="needle" src="../../img/needle.svg"
-				data-_kniferotatestart="transform:rotate(0deg) translate(0px, 0px);"
-				data-_kniferotateend="transform:rotate(45deg) translate(150px,90px);"
-				data-_knifecutstart="left:400px;"
-				data-_knifecutend="left:20px;"
-				data-_makethecutstart="left:400px; top:0px;"
-				data-_makethecutend="left:700px; top:50px;"></img>
+                <img className="needle" src="../../img/needle.svg"
+				data-center-top="transform:translate(0px, 0px);"
+				data-top-bottom="transform:translate(0px, 90px);"></img>
 				<img className="stretcher" src="../../img/stretcher.svg"
-				data-_surgeriepatientstart="transform: translateX(0px);" data-_surgeriepatientend="transform: translateX(-700px);"></img>
+				data-bottom-top="transform: translateX(0vw);" data-center-top="transform: translateX(-30vw);"></img>
 			</div>
 		);
 	}
