@@ -1,10 +1,12 @@
 .blood {
-
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
 	img {
 		display: block;	
 		margin-left: auto;
 		margin-right: auto;
-		height: 475px;
+		height: 60vh;
 	};
   
   .blood_wrapper {
@@ -16,6 +18,7 @@
 
 	.blood_mynd {
 	  position: absolute;
+    left: 10vw;
 	}
 
 	.blood_overlay {

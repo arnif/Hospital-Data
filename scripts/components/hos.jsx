@@ -23,7 +23,7 @@ let Hos = React.createClass({
 		console.log('[render]getPercent', this.getPercent(this.props.selected));
 		return (
 			<div className={this.props.className}>
-				<div className="headInfo">There are</div>
+				<div className="headInfo">There were</div>
 				<img className="icu sick" src="../../img/hurt.svg" style={{height: icu}}></img>					
 				<img className="er sick" src="../../img/hurt.svg" style={{height: er}}></img>
 				<img className="child sick" src="../../img/hurt.svg" style={{height: child}}></img>
