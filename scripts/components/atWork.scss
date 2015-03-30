@@ -1,5 +1,14 @@
 .atWork {
-      margin-bottom: 0vh !important;
+	margin-bottom: 0vh !important;
+	.nowInfo {
+		border: 1px solid black; 
+		display: inline-block;
+		position: fixed;
+		right: 0px;
+		top: 0px;
+
+
+	}
 	.nurse {
 		height: 60vh;
 	}

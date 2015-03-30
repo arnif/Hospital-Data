@@ -32,8 +32,10 @@ let AtWork = React.createClass({
 	},
 	render() {
 		return (
-
 			<div className={this.props.className}>
+			<div className="nowInfo">
+				{this.props.now} working
+			</div>
 				<img className="nurse male" data-bottom-top="transform: translateX(-60%);" data-center="transform: translateX(200%);" src="../../img/doctor.svg"></img>
 				<img className="nurse female" data-bottom-top="transform: translateX(60%);" data-center="transform: translateX(-200%	);" src="../../img/nurse2.svg"></img>
                 <div className="text-bellow">
