@@ -53,7 +53,7 @@ let App = React.createClass({
      icu: this.props.now.patientsIcu,
      hotel: this.props.now.patientsHotel,
      walk: this.props.now.patientsWalk
-   }
+   };
    console.log('[render]date', this.state.date)
    var date = moment(this.state.date).format("dddd, MMMM DD YYYY [at] h:mm");
     return (
@@ -76,7 +76,7 @@ let App = React.createClass({
         </div>
         <AtWork className="height atWork" selected={this.props.selected.atWork} now={this.props.now.atWork}/>
         <Blood className="height blood" selected={this.props.selected.donors} now={this.props.now.donors}/>
-        <Surgery className="height surgery" selected={this.props.selected.surgeries} now={this.props.now.surgeries}/>
+        <Surgery className="height extraHigh surgery" selected={this.props.selected.surgeries} now={this.props.now.surgeries}/>
         <Birth className="height birth" selected={this.props.selected.birthNumbers} now={this.props.now.birthNumbers}/>
         <Hos className="height hos" selected={hospitalizedNumbers} now={nowHospitalizedNumbers}/>
       </div>
