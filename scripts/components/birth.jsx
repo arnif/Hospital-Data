@@ -12,7 +12,7 @@ let Birth = React.createClass({
 		return (
 			<div className={this.props.className}>
 				<div className="text-bellow">
-					{this.props.selected} were born but NOW there are {this.props.now}
+					{this.props.selected} were born
 				</div>
 				<img className="preggo"  src="../../img/preggo.svg"></img>
 				<img className="fetus" data-bottom="top: 58%; opacity: 1; left: 50%;" data-top="top: 88%; left: 60%; opacity: 0;" src="../../img/fetus.svg"></img>

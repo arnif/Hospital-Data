@@ -2,11 +2,18 @@
 	position: relative;
 	top: 0px;
 	left: 0px;
-	.needle {
-		position: absolute;
-		left: 50%;
-		height: 20%;
-	};
+	.needle_wrapper {
+		.needle {
+			position: absolute;
+			left: 50%;
+			height: 20%;
+		};
+		.needle_overlay {
+		  	position: absolute;
+			left: 50%;
+			height: 20%;	  
+		}
+	}
 	.stretcher {
 		position: absolute;
 		bottom: 60px;
