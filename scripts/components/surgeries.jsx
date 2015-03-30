@@ -12,12 +12,14 @@ let surgery = React.createClass({
 	render() {
 		return (
 			<div className={this.props.className}>
-                <div className="theText">
+                <div className="theText"
+					data-center-top="transform:translate(0px, 0px);"
+					data-top-bottom="transform:translate(0px, 290px);"
+				>
                     There were {this.props.selected} person in surgery NOW there are {this.props.now}
+					<img className="needle" src="../../img/needle.svg"></img>
                 </div>
-                <img className="needle" src="../../img/needle.svg"
-				data-center-top="transform:translate(0px, 0px);"
-				data-top-bottom="transform:translate(0px, 90px);"></img>
+
 				<img className="stretcher" src="../../img/stretcher.svg"
 				data-bottom-top="transform: translateX(0vw);" data-center-top="transform: translateX(-30vw);"></img>
 			</div>
