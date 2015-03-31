@@ -3,6 +3,7 @@
 import React from 'react/addons';
 import FluxContainer from 'flummox';
 import constants from '../config/constants';
+var Waypoint = require('react-waypoint');
 require('./atWork.scss');
 require(['skrollr'], function(skrollr){
 	var s = skrollr.init({
@@ -30,12 +31,21 @@ let AtWork = React.createClass({
 	getInitialState() {
 		return null
 	},
+	_testEnter() {
+		console.log('ENTER');
+	},
+	_testLeve() {
+		console.log('LEFT');
+	},
 	render() {
 		return (
+
 			<div className={this.props.className}>
-			<div className="nowInfo">
-				{this.props.now} working
-			</div>
+				<Waypoint
+					onEnter={this._testEnter.bind(this, 'Waypoint entered')}
+					onLeave={this._testLeve.bind(this, 'Waypoint left')}
+					threshold={0.2}
+				/>
 				<img className="nurse male" data-bottom-top="transform: translateX(-60%);" data-center="transform: translateX(200%);" src="../../img/doctor.svg"></img>
 				<img className="nurse female" data-bottom-top="transform: translateX(60%);" data-center="transform: translateX(-200%	);" src="../../img/nurse2.svg"></img>
                 <div className="text-bellow">

@@ -35,6 +35,14 @@
 
 }
 
+.nowInfo {
+  border: 1px solid black;
+  display: inline-block;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+}
+
 body {
   min-height: 100vh;
   overflow-x: hidden;

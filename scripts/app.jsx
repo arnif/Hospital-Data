@@ -4,6 +4,7 @@ import React from 'react/addons';
 import FluxContainer from 'flummox';
 import constants from './config/constants';
 var ReactWidgets = require('react-widgets');
+var Waypoint = require('react-waypoint');
 var DateTimePicker = ReactWidgets.DateTimePicker;
 var moment = require('moment');
 var AtWork = require('./components/atWork');
@@ -18,8 +19,29 @@ require('./divStyles.scss');
 let Props = React.PropTypes;
 let CSSTransitionGroup = React.addons.CSSTransitionGroup;
 
+function isElementVisible(el) {
+  var rect     = el.getBoundingClientRect(),
+      vWidth   = window.innerWidth || doc.documentElement.clientWidth,
+      vHeight  = window.innerHeight || doc.documentElement.clientHeight,
+      efp      = function (x, y) { return document.elementFromPoint(x, y) };
+
+  // Return false if it's not in the viewport
+  if (rect.right < 0 || rect.bottom < 0
+      || rect.left > vWidth || rect.top > vHeight)
+    return false;
+
+  // Return true if any of its four corners are visible
+  return (
+  el.contains(efp(rect.left,  rect.top))
+  ||  el.contains(efp(rect.right, rect.top))
+  ||  el.contains(efp(rect.right, rect.bottom))
+  ||  el.contains(efp(rect.left,  rect.bottom))
+  );
+}
+
 
 let App = React.createClass({
+
   getInitialState() {
     var date = new Date(moment().set('minutes', 0).format());
     return { date: date};
@@ -54,10 +76,30 @@ let App = React.createClass({
      hotel: this.props.now.patientsHotel,
      walk: this.props.now.patientsWalk
    };
-   console.log('[render]date', this.state.date)
+   console.log('[render]date', this.state.date);
    var date = moment(this.state.date).format("dddd, MMMM DD YYYY [at] h:mm");
+    //var now = 0;
+    //var that = this;
+    //let ListOfElements = [{className: 'atWork', prop: 'atWork'}, {className: 'blood', prop: 'donors'}, {className: 'surgery', prop: 'surgeries'}, {className: 'birth', prop: 'birthNumbers'},{className: 'hos', prop:'nowHospitalizedNumbers'}];
+    //var currentElInView;
+    //var prevElInView;
+    //setInterval(function() {
+    //  ListOfElements.map(function(el) {
+    //
+    //    var isInView = isElementVisible(document.getElementsByClassName(el.className)[0]);
+    //    if (isInView && el !== currentElInView) {
+    //      prevElInView = currentElInView;
+    //      currentElInView = el;
+    //      that.setState({current: that.props.now[el.prop]})
+    //    }
+    //  });
+    //}, 500);
+
     return (
       <div>
+        <div className="nowInfo">
+				{this.state.current} working
+        </div>
         <div className="hospital-header"> 
           <div className="title-text">Hospital Data</div>
           <div className="pick-text">Pick a date and time</div>
