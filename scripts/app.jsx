@@ -78,22 +78,22 @@ let App = React.createClass({
    };
    console.log('[render]date', this.state.date);
    var date = moment(this.state.date).format("dddd, MMMM DD YYYY [at] h:mm");
-    //var now = 0;
-    //var that = this;
-    //let ListOfElements = [{className: 'atWork', prop: 'atWork'}, {className: 'blood', prop: 'donors'}, {className: 'surgery', prop: 'surgeries'}, {className: 'birth', prop: 'birthNumbers'},{className: 'hos', prop:'nowHospitalizedNumbers'}];
-    //var currentElInView;
-    //var prevElInView;
-    //setInterval(function() {
-    //  ListOfElements.map(function(el) {
-    //
-    //    var isInView = isElementVisible(document.getElementsByClassName(el.className)[0]);
-    //    if (isInView && el !== currentElInView) {
-    //      prevElInView = currentElInView;
-    //      currentElInView = el;
-    //      that.setState({current: that.props.now[el.prop]})
-    //    }
-    //  });
-    //}, 500);
+    /*var now = 0;
+    var that = this;
+    let ListOfElements = [{className: 'atWork', prop: 'atWork'}, {className: 'blood', prop: 'donors'}, {className: 'surgery', prop: 'surgeries'}, {className: 'birth', prop: 'birthNumbers'},{className: 'hos', prop:'nowHospitalizedNumbers'}];
+    var currentElInView;
+    var prevElInView;
+    setInterval(function() {
+     ListOfElements.map(function(el) {
+    
+       var isInView = isElementVisible(document.getElementsByClassName(el.className)[0]);
+       if (isInView && el !== currentElInView) {
+         prevElInView = currentElInView;
+         currentElInView = el;
+         that.setState({current: that.props.now[el.prop]})
+       }
+     });
+    }, 500);*/
 
     return (
       <div>

@@ -13,11 +13,11 @@ let Hos = React.createClass({
 	},
 	render() {
 		var selected = this.props.selected;
-		var icu =  parseInt(selected.icu) / parseInt(this.getPercent(selected)) * 100 + '%';
-		var er =  parseInt(selected.er) / parseInt(this.getPercent(selected)) * 100 + '%';
-		var child =  parseInt(selected.child) / parseInt(this.getPercent(selected)) * 100 + '%';
-		var hotel =  parseInt(selected.hotel) / parseInt(this.getPercent(selected)) * 100 + '%';
-		var walk =  parseInt(selected.walk) / parseInt(this.getPercent(selected)) * 100 + '%';
+		var icu =  parseInt(selected.icu) / parseInt(this.getPercent(selected)) * 1000 + 'px';
+		var er =  parseInt(selected.er) / parseInt(this.getPercent(selected)) * 1000 + 'px';
+		var child =  parseInt(selected.child) / parseInt(this.getPercent(selected)) * 1000 + 'px';
+		var hotel =  parseInt(selected.hotel) / parseInt(this.getPercent(selected)) * 1000 + 'px';
+		var walk =  parseInt(selected.walk) / parseInt(this.getPercent(selected)) * 1000 + 'px';
 		console.log('[render]a', icu);
 		console.log('[render]icu', this.props.selected.icu);
 		console.log('[render]getPercent', this.getPercent(this.props.selected));

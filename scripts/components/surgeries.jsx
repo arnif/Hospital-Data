@@ -13,8 +13,8 @@ let surgery = React.createClass({
 		return (
 			<div className={this.props.className}>
                 <div className="theText needle_wrapper"
-					data-center-top="transform:translate(0px, 0%);"
-					data-top-bottom="transform:translate(0px, 620%);"
+					data-center-top="transform:translate(0px, 0vh);"
+					data-top-bottom="transform:translate(0px, 25vh);"
 				>
 				<div className="negative-margin">
                     There were {this.props.selected} person in surgery
