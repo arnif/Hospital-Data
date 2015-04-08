@@ -36,12 +36,15 @@
 }
 
 .nowInfo {
-  border: 1px solid black;
+  border: 2px solid rgb(22, 22, 22);
   display: inline-block;
+  border-right: none;
   position: fixed;
   right: 0px;
-  top: 0px;
-  opacity:0;
+  top: 100px;
+  opacity: 0;
+  padding: 15px;
+  border-radius: 2px;
 }
 
 body {

@@ -42,8 +42,8 @@ let AtWork = React.createClass({
 		return (
 
 			<div className={this.props.className}>
-				<div className="nowInfo" data-_fifty="top:10px; opacity:0;" data-_onefifty="top:100px; opacity: 1;" data-_twofifty="opacity:0;">
-					currently there are {this.props.now} working
+				<div className="nowInfo" data-_fifty="opacity:0; right:-300px;" data-_onefifty="opacity: 1; right:0;" data-_twofifty="opacity:0;">
+					Now there are {this.props.now} working
 				</div>
 				<img className="nurse male" data-bottom-top="transform: translateX(-60%);" data-center="transform: translateX(200%);" src="../../img/doctor.svg"></img>
 				<img className="nurse female" data-bottom-top="transform: translateX(60%);" data-center="transform: translateX(-200%	);" src="../../img/nurse2.svg"></img>
