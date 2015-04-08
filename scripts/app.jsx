@@ -75,7 +75,7 @@ let App = React.createClass({
      hotel: this.props.now.patientsHotel,
      walk: this.props.now.patientsWalk
    };
-   var date = moment(this.state.date).format("dddd, MMMM DD YYYY [at] h:mm");
+   var date = moment(this.state.date).format("dddd, MMMM DD YYYY [at] HH:mm");
 
     return (
       <div>
@@ -85,6 +85,7 @@ let App = React.createClass({
           <div className="hospital-picker-wrapper">
             <DateTimePicker
                 className="hospital-picker-picker"
+                format={"dddd, MMMM dd, yyyy HH:mm"}
                 step={60}
                 value={this.state.date}
                 onChange={this.changeDate.bind()}
