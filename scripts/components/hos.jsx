@@ -21,8 +21,13 @@ let Hos = React.createClass({
 		var walk =  parseInt(selected.walk) / parseInt(this.getPercent(selected)) * 1000 + 'px';
 		return (
 			<div className={this.props.className}>
-				<div className="nowInfo" data-_sixfifty="opacity:0; right:-300px;" data-_sevenfifty="right:0; opacity: 1;" data-_eighthundered="opacity:0;">
-					Today there are {now.icu} in the ICU
+				<div className="nowInfo" data-_sixfifty="opacity:0; right:-300px;" data-_sixeighty="right:0; opacity: 1;" data-_sevenfifty="opacity:0;">
+					Today there are <br />
+					{now.icu} in the ICU<br />
+					{now.er} in the ER<br />
+					{now.child} in the child faculty<br />
+					{now.hotel} in the hospital hotel<br />
+					{now.walk} in the outpatient<br />
 				</div>
 				<div className="headInfo">There were</div>
 				<img className="icu sick" src="../../img/hurt.svg" style={{height: icu}}></img>					
