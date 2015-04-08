@@ -11,7 +11,7 @@ let Blood = React.createClass({
 	render() {
 		return (
 			<div className={this.props.className}>
-				<div className="nowInfo">
+				<div className="nowInfo" data-_twofifty="top:10px; opacity:0;" data-_threehundred="top:100px; opacity: 1;" data-_threefifty="opacity:0;">
 					Today {this.props.now} have given blood
 				</div>
 				<div className="blood_wrapper">
