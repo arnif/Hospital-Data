@@ -1,3 +1,4 @@
+@import '../variables';
 .atWork {
 	margin-bottom: 0vh !important;
 	.nurse {
@@ -10,7 +11,7 @@
     .text-bellow{
       width: 100%;
       text-align: center;
-      font-size: 55px;
+      font-size: $text-size;
       width: 80vw;
       margin-left: auto;
       margin-right: auto;

@@ -1,3 +1,4 @@
+@import '../variables';
 .surgery {
 	position: relative;
 	top: 0px;
@@ -30,7 +31,7 @@
   .theText {
     padding-top: 25px;
     text-align: center;
-    font-size: 55px;
+    font-size: $text-size;
     width: 70vw;
   	margin-left: auto;
   	margin-right: auto;
