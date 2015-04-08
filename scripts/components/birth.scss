@@ -4,21 +4,21 @@
 	left: 0;
 	.preggo {
 		position: absolute;
-		bottom: 0;
+		top: 80px;
 		left: 48%;
-		height: 70%;
+		height: 70vh;
 	};
 	.fetus {
 		position: absolute;
 		left: 50%;
 		top: 58%;
-		height: 15%;
+		height: 15vh;
 	}
 	.newborn {
 		position: absolute;
 		left: 60%;
 		top: 82%;
-		height: 15%;
+		height: 15vh;
 
 	}
 	.text-bellow{
@@ -26,6 +26,7 @@
     text-align: center;
     font-size: 55px;
     margin-right: auto;
+    position: relative;
     margin-left: auto;
   }
 };
