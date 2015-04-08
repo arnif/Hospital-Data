@@ -13,6 +13,7 @@ let Hos = React.createClass({
 	},
 	render() {
 		var selected = this.props.selected;
+		var now = this.props.now;
 		var icu =  parseInt(selected.icu) / parseInt(this.getPercent(selected)) * 1000 + 'px';
 		var er =  parseInt(selected.er) / parseInt(this.getPercent(selected)) * 1000 + 'px';
 		var child =  parseInt(selected.child) / parseInt(this.getPercent(selected)) * 1000 + 'px';
@@ -20,6 +21,9 @@ let Hos = React.createClass({
 		var walk =  parseInt(selected.walk) / parseInt(this.getPercent(selected)) * 1000 + 'px';
 		return (
 			<div className={this.props.className}>
+				<div className="nowInfo" data-_sixfifty="opacity:0; right:-300px;" data-_sevenfifty="right:0; opacity: 1;" data-_eighthundered="opacity:0;">
+					Today there are {now.icu} in the ICU
+				</div>
 				<div className="headInfo">There were</div>
 				<img className="icu sick" src="../../img/hurt.svg" style={{height: icu}}></img>					
 				<img className="er sick" src="../../img/hurt.svg" style={{height: er}}></img>

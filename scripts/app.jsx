@@ -4,7 +4,6 @@ import React from 'react/addons';
 import FluxContainer from 'flummox';
 import constants from './config/constants';
 var ReactWidgets = require('react-widgets');
-var Waypoint = require('react-waypoint');
 var DateTimePicker = ReactWidgets.DateTimePicker;
 var moment = require('moment');
 var AtWork = require('./components/atWork');
@@ -38,16 +37,6 @@ function isElementVisible(el) {
   ||  el.contains(efp(rect.left,  rect.bottom))
   );
 }
-setTimeout(function() {
-    var waypoint = new MyWayPoints({
-        element: document.getElementById('hospital-state'),
-        handler: function(direction) {
-            console.log('Scrolled to waypoint!')
-        }
-    });
-    console.log(waypoint);
-},1000);
-
 
 
 let App = React.createClass({

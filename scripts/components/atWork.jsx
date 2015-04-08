@@ -30,7 +30,8 @@ require(['skrollr'], function(skrollr){
 			sixhundered: '600p',
 			sixfifty: '650p',
 			sevenhundered: '700p',
-			sevenfifty: '750p'
+			sevenfifty: '750p',
+			eighthundered: '800p'
 		}
 	});
 });
