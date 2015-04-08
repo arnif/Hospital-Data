@@ -38,6 +38,16 @@ function isElementVisible(el) {
   ||  el.contains(efp(rect.left,  rect.bottom))
   );
 }
+setTimeout(function() {
+    var waypoint = new MyWayPoints({
+        element: document.getElementById('hospital-state'),
+        handler: function(direction) {
+            console.log('Scrolled to waypoint!')
+        }
+    });
+    console.log(waypoint);
+},1000);
+
 
 
 let App = React.createClass({
@@ -49,7 +59,7 @@ let App = React.createClass({
   componentDidMount() {
     this.changeDate(new Date(moment().set('minutes', 0).format()));
   },
-  changeDate(value) {
+    changeDate(value) {
     //Sat Mar 07 2015 14:56:00 GMT+0000 (GMT)
     var state = {};
     state['date'] = value;
@@ -76,30 +86,10 @@ let App = React.createClass({
      hotel: this.props.now.patientsHotel,
      walk: this.props.now.patientsWalk
    };
-   console.log('[render]date', this.state.date);
    var date = moment(this.state.date).format("dddd, MMMM DD YYYY [at] h:mm");
-    /*var now = 0;
-    var that = this;
-    let ListOfElements = [{className: 'atWork', prop: 'atWork'}, {className: 'blood', prop: 'donors'}, {className: 'surgery', prop: 'surgeries'}, {className: 'birth', prop: 'birthNumbers'},{className: 'hos', prop:'nowHospitalizedNumbers'}];
-    var currentElInView;
-    var prevElInView;
-    setInterval(function() {
-     ListOfElements.map(function(el) {
-    
-       var isInView = isElementVisible(document.getElementsByClassName(el.className)[0]);
-       if (isInView && el !== currentElInView) {
-         prevElInView = currentElInView;
-         currentElInView = el;
-         that.setState({current: that.props.now[el.prop]})
-       }
-     });
-    }, 500);*/
 
     return (
       <div>
-        <div className="nowInfo">
-				{this.state.current} working
-        </div>
         <div className="hospital-header"> 
           <div className="title-text">Hospital Data</div>
           <div className="pick-text">Pick a date and time</div>
@@ -113,14 +103,16 @@ let App = React.createClass({
             />
           </div>
         </div>
-        <div className="introText">
+        <div className="introText" id="hospital-state">
           On {date} this was the state of the hospital
         </div>
+
         <AtWork className="height atWork" selected={this.props.selected.atWork} now={this.props.now.atWork}/>
         <Blood className="height blood" selected={this.props.selected.donors} now={this.props.now.donors}/>
         <Surgery className="height extraHigh surgery" selected={this.props.selected.surgeries} now={this.props.now.surgeries}/>
         <Birth className="height birth" selected={this.props.selected.birthNumbers} now={this.props.now.birthNumbers}/>
         <Hos className="height hos" selected={hospitalizedNumbers} now={nowHospitalizedNumbers}/>
+
       </div>
     );
   }

@@ -18,9 +18,6 @@ let Hos = React.createClass({
 		var child =  parseInt(selected.child) / parseInt(this.getPercent(selected)) * 1000 + 'px';
 		var hotel =  parseInt(selected.hotel) / parseInt(this.getPercent(selected)) * 1000 + 'px';
 		var walk =  parseInt(selected.walk) / parseInt(this.getPercent(selected)) * 1000 + 'px';
-		console.log('[render]a', icu);
-		console.log('[render]icu', this.props.selected.icu);
-		console.log('[render]getPercent', this.getPercent(this.props.selected));
 		return (
 			<div className={this.props.className}>
 				<div className="headInfo">There were</div>

@@ -8,7 +8,7 @@ require('./atWork.scss');
 require(['skrollr'], function(skrollr){
 	var s = skrollr.init({
 		constants: {
-			onehundred: 100,
+			onehundred: '100p',
 			zero: '50p',
 			five00 : '80p',
 			donorsstart: '150p',
@@ -31,21 +31,13 @@ let AtWork = React.createClass({
 	getInitialState() {
 		return null
 	},
-	_testEnter() {
-		console.log('ENTER');
-	},
-	_testLeve() {
-		console.log('LEFT');
-	},
 	render() {
 		return (
 
 			<div className={this.props.className}>
-				<Waypoint
-					onEnter={this._testEnter.bind(this, 'Waypoint entered')}
-					onLeave={this._testLeve.bind(this, 'Waypoint left')}
-					threshold={0.2}
-				/>
+				<div className="nowInfo" data-_zero="top:10px; opacity:0;" data-_donorsstart="top:100px; opacity: 1;" data-_surgeriepatientstart="opacity:0;">
+					currently there are {this.props.now} working
+				</div>
 				<img className="nurse male" data-bottom-top="transform: translateX(-60%);" data-center="transform: translateX(200%);" src="../../img/doctor.svg"></img>
 				<img className="nurse female" data-bottom-top="transform: translateX(60%);" data-center="transform: translateX(-200%	);" src="../../img/nurse2.svg"></img>
                 <div className="text-bellow">
