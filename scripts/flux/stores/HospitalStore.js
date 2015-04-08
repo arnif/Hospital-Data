@@ -42,12 +42,8 @@ class HospitalStore extends Store {
     }
   }
   setData(hospital) {
-    console.log('this is the new data!!!', hospital);
-    //let hospitalData = hospital[0].hospitalData.results[0];
     let now = hospital.currentData.results[0];
     let selected = hospital.selectedData[0].hospitalData.results[0];
-
-    console.log('selected', selected);
 
   	this.setState({
       now: {

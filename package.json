@@ -46,6 +46,7 @@
     "sass-loader": "^0.4.2",
     "skrollr": "^0.6.26",
     "style-loader": "^0.8.3",
-    "superagent": "^0.21.0"
+    "superagent": "^0.21.0",
+    "waypoints": "^3.1.1"
   }
 }

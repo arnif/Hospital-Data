@@ -12,6 +12,9 @@ let surgery = React.createClass({
 	render() {
 		return (
 			<div className={this.props.className}>
+				<div className="nowInfo">
+					Now there are {this.props.now} in surgery
+				</div>
                 <div className="theText needle_wrapper"
 					data-center-top="transform:translate(0px, 0vh);"
 					data-top-bottom="transform:translate(0px, 25vh);"
