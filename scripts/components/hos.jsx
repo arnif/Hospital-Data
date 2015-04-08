@@ -21,8 +21,8 @@ let Hos = React.createClass({
 		var walk =  parseInt(selected.walk) / parseInt(this.getPercent(selected)) * 1000 + 'px';
 		return (
 			<div className={this.props.className}>
-				<div className="nowInfo" data-_sixfifty="opacity:0; right:-300px;" data-_sixeighty="right:0; opacity: 1;" data-_sevenfifty="opacity:0;">
-					Today there are <br />
+				<div className="nowInfo" data-_sixfifty="opacity:0; right:-300px;" data-_sixeighty="right:0; opacity: 1;" data-_sevenfifty="opacity:1;">
+					Now there are <br />
 					{now.icu} in the ICU<br />
 					{now.er} in the ER<br />
 					{now.child} in the child faculty<br />

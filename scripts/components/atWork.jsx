@@ -8,9 +8,9 @@ require('./atWork.scss');
 require(['skrollr'], function(skrollr){
 	var s = skrollr.init({
 		constants: {
-			onehundred: '100p',
 			fifty: '50p',
 			eighty : '80p',
+			onehundred: '100p',
 			onefifty: '150p',
 			oneeighty: '180p',
 			twohundered: '200p',
@@ -45,7 +45,7 @@ let AtWork = React.createClass({
 		return (
 
 			<div className={this.props.className}>
-				<div className="nowInfo" data-_fifty="opacity:0; right:-300px;" data-_onefifty="opacity: 1; right:0;" data-_twofifty="opacity:0;">
+				<div className="nowInfo" data-_onehundred="opacity:0; right:-300px;" data-_onefifty="opacity: 1; right:0;" data-_twofifty="opacity:0;">
 					Now there are {this.props.now} working
 				</div>
 				<img className="nurse male" data-bottom-top="transform: translateX(-60%);" data-center="transform: translateX(200%);" src="../../img/doctor.svg"></img>

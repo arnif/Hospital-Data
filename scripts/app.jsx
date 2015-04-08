@@ -60,7 +60,7 @@ let App = React.createClass({
     return (
       <div>
         <div className="hospital-header"> 
-          <div className="title-text">Hospital Data</div>
+          <div className="title-text">We Dare To Care</div>
           <div className="pick-text">Pick a date and time</div>
           <div className="hospital-picker-wrapper">
             <DateTimePicker
