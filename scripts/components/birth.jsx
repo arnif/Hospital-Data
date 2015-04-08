@@ -11,7 +11,7 @@ let Birth = React.createClass({
 	render() {
 		return (
 			<div className={this.props.className}>
-				<div className="nowInfo" data-_fivefifty="opacity:0; right:-300px;" data-_sixhundered="right:0; opacity: 1;" data-_sevenhundered="opacity:0; right:-300px;">
+				<div className="nowInfo" data-_foureighty="opacity:0; right:-300px;" data-_fivehundred="right:0; opacity: 1;" data-_sixfifty="opacity:0; right:-300px;">
 					Today there are {this.props.now} born
 				</div>
 				<div className="text-bellow" data-center-bottom="top: 0%;" data-top="top:15%;">

@@ -25,10 +25,12 @@ require(['skrollr'], function(skrollr){
 			threefifty: '350p',
 			fourhundred: '400p',
 			fourfifty: '450p',
+			foureighty: '480p',
 			fivehundred: '500p',
 			fivefifty: '550p',
 			sixhundered: '600p',
 			sixfifty: '650p',
+			sixeighty: '680p',
 			sevenhundered: '700p',
 			sevenfifty: '750p',
 			eighthundered: '800p'
