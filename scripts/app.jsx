@@ -23,7 +23,7 @@ let App = React.createClass({
 
   getInitialState() {
     var date = new Date(moment().set('minutes', 0).format());
-    return { date: date};
+    return { date: date, scrollText: ''};
   },
   componentDidMount() {
     this.changeDate(new Date(moment().set('minutes', 0).format()));
@@ -32,6 +32,7 @@ let App = React.createClass({
     //Sat Mar 07 2015 14:56:00 GMT+0000 (GMT)
     var state = {};
     state['date'] = value;
+      state['scrollText'] = 'Scroll Down ▾';
     this.setState(state);
     var date = moment(value).format();
     var dateFrom = moment(value).subtract(15, 'minutes').format();
@@ -60,7 +61,7 @@ let App = React.createClass({
     return (
       <div>
         <div className="hospital-header"> 
-          <div className="title-text">We Dare To Care</div>
+          <div className="title-text">Statspital</div>
           <div className="pick-text">Pick a date and time</div>
           <div className="hospital-picker-wrapper">
             <DateTimePicker
@@ -72,6 +73,7 @@ let App = React.createClass({
                 onChange={this.changeDate.bind()}
 
             />
+              <div className="scroll-down-instructions"> {this.state.scrollText} </div>
           </div>
         </div>
         <div className="introText" id="hospital-state">

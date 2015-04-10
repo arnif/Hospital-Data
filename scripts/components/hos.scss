@@ -19,4 +19,11 @@
 		text-align: center;
 		font-size: $text-size;
 	}
+
+  .go-to-top-inticator {
+	cursor: pointer;
+	left: 45%;
+	position: relative;
+	margin-top: 42px;
+  }
 }

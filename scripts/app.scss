@@ -19,9 +19,15 @@
   }
 
   .pick-text {
-    font-size: 55px;
+    font-size: 22px;
     padding-bottom: 50px;
   }
+}
+
+.scroll-down-instructions {
+  position: absolute;
+  right: 46%;
+  bottom:0;
 }
 
 .hospital-picker-wrapper {

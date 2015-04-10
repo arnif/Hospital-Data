@@ -4,9 +4,26 @@ import React from 'react/addons';
 import FluxContainer from 'flummox';
 import constants from '../config/constants';
 require('./hos.scss');
+
+
+function scrollTo(element, to, duration) {
+	if (duration < 0) return;
+	var difference = to - element.scrollTop;
+	var perTick = difference / duration * 10;
+
+	setTimeout(function() {
+		element.scrollTop = element.scrollTop + perTick;
+		if (element.scrollTop == to) return;
+		scrollTo(element, to, duration - 10);
+	}, 10);
+}
+
 let Hos = React.createClass({
 	getInitialState() {
 		return null
+	},
+	goToTop() {
+		scrollTo(document.body, 0, 500);
 	},
 	getPercent(selected) {
 		return selected.icu + selected.er + selected.child + selected.hotel + selected.walk;
@@ -42,6 +59,7 @@ let Hos = React.createClass({
 					<p>{selected.hotel} at the hospital hotel</p>
 					<p>{selected.walk} at the outpatient</p>
 				</div>
+				<div className="go-to-top-inticator" onClick={this.goToTop}>Go To Top ▴</div>
 			</div>
 		);
 	}
